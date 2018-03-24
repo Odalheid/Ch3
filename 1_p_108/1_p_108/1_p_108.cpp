@@ -1,4 +1,4 @@
-// 1_p_108.cpp: îïğåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïğèëîæåíèÿ.
+// 1_p_108.cpp: Ã®Ã¯Ã°Ã¥Ã¤Ã¥Ã«Ã¿Ã¥Ã² Ã²Ã®Ã·ÃªÃ³ Ã¢ÃµÃ®Ã¤Ã  Ã¤Ã«Ã¿ ÃªÃ®Ã­Ã±Ã®Ã«Ã¼Ã­Ã®Ã£Ã® Ã¯Ã°Ã¨Ã«Ã®Ã¦Ã¥Ã­Ã¨Ã¿.
 //
 
 #include "stdafx.h"
@@ -24,19 +24,21 @@ int main()
 		cin >> friend_sex;
 		cout << "\nPls insert your friend's age\n";
 		cin >> age;
+		cout << "\nPls insert your name & surname\n";
+		cin >> adressee_name >> adressee_surname;
 		
 		cout << "\n\nDear " << first_name << ",\n\nHow are you? I'm quite well. I miss you a lot. Have you seen " << friend_name << " lately?";
 		if (friend_sex == 'm') cout << " If you see " << friend_name << ", please ask him to call me.";
 		if (friend_sex == 'f') cout << " If you see " << friend_name << ", please ask her to call me.";
 		
-		if (age > 0 && age < 110) { cout << " I hear you've just had your birthday and you're now " << age << " years old."; }
-		if (age < 0 && age > 110) { cout << " About the age, you're joking!"; }
+		if (age > 0 && age <= 110) cout << " I hear you've just had your birthday and you're now " << age << " years old.";
+		else cout << " About the age, you're joking!";
 		
-		if (age > 0 && age < 12) {cout << " Next year you'll be " << ++age << " years old.";}
-		if (age == 18) {cout << " Next year you'll have the right to vote.";}
-		if (age < 110 && age > 60) {cout << " I hope you aren't bored at your retirement.\n\n";}
-		cout << "Yours sincerely,\n";
-		cin >> adressee_name >> adressee_surname;
+		if (age > 0 && age < 12) cout << " Next year you'll be " << ++age << " years old.";
+		if (age == 18) cout << " Next year you'll have the right to vote.";
+		if (age < 110 && age > 60) cout << " I hope you aren't bored at your retirement.\n\n";
+		cout << "Yours sincerely,\n" << adressee_name << adressee_surname;
+		
 	}
     return 0;
 }
